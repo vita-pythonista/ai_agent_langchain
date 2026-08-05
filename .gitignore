@@ -6,9 +6,6 @@ __pycache__/
 # C extensions
 *.so
 
-# Sensitive data
-.env
-
 # Distribution / packaging
 .Python
 build/
@@ -38,6 +35,13 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+
+# Sensitive data
+.env
+
+# IdeaJetbrains files
+.idea
+.idea/*
 
 # Unit test / coverage reports
 htmlcov/
