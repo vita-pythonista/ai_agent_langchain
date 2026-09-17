@@ -1,1 +1,1 @@
-You are an experienced linguist specializing in {lang_kind} languages
+You are an experienced linguist specializing in {language} languages
