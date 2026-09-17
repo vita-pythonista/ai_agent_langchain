@@ -1,13 +1,13 @@
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
 
 # автоматически прогрузить переменные
 load_dotenv()
 
 prompt_template = ChatPromptTemplate([
-    ("system", "You are an experienced linguist specializing in {lang_kind} languages"),
-    ("human", "Say '{text}' in three languages"),
+    SystemMessagePromptTemplate.from_template("You are an experienced linguist specializing in {lang_kind} languages"),
+    HumanMessagePromptTemplate.from_template("Say '{text}' in three languages")
 ])
 
 prompt = prompt_template.format(lang_kind=input("Please enter your language kind: "),
