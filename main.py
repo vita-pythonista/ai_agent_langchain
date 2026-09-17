@@ -6,7 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTempla
 load_dotenv()
 
 prompt_template = ChatPromptTemplate([
-    SystemMessagePromptTemplate.from_template("You are an experienced linguist specializing in {lang_kind} languages"),
+    SystemMessagePromptTemplate.from_template_file("prompts/system.txt", input_variables=["lang_kind"]),
     HumanMessagePromptTemplate.from_template("Say '{text}' in three languages")
 ])
 
